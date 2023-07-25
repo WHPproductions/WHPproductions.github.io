@@ -1,0 +1,252 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+@font-face {
+    font-family: tf2secondary;
+    src: url(Fonts/tf2_secondary/TF2secondary.ttf);
+  }
+@font-face {
+    font-family: tf2build;
+    src: url(Fonts/tf2_build/tf2build.ttf);
+  }
+a {
+    text-decoration: none;
+    color: unset;
+}
+html {
+    scroll-behavior: smooth;
+}
+.clear {
+    clear: both;
+}
+
+
+/* ----------------------------------Top Styles---------------------------------- */
+
+.topbar h1 {
+    text-shadow: 1px 1px 3px #ffffff, -1px -1px 3px#ffffff, 1px -1px 3px#ffffff, -1px 1px 3px#ffffff;
+    display: inline-block;
+    padding-left: 2em;
+    padding-top: 10px;
+    font-size: 2em;
+    font-family: 'tf2build';
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+.menu {
+    position: relative;
+    height: 50px;
+    display: none;
+    float: right;
+    margin-top: 17.5px;
+    margin-bottom: 17.5px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.topbar ul {
+    padding-left: 50px;
+}
+
+.topbar ul li {
+    float: left;
+    text-align: center;
+    display: block;
+    padding-right: 17px;
+    font-family: 'tf2secondary';
+    color: white;
+    border-spacing: 0;
+}
+
+.topbar ul li a {
+    color: white;
+    transition: .1s;
+}
+
+.topbar ul li a img {
+    height: 16px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.topbar ul li :hover {
+    font-size: large;
+}
+
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background-color: rgb(173, 72, 0);
+    border-bottom: 3px solid black;
+    box-shadow: 3px 0 5px black;
+    background: linear-gradient(rgb(214, 90, 0), rgb(145, 60, 0));
+}
+
+.topbar p {
+    font-family: 'tf2secondary';
+    display: block;
+    float: right;
+    padding: 5px;
+}
+
+/* ----------------------------------Jumbotron Styles---------------------------------- */
+
+.jumbotron {
+    background-image: url(img/Team_Fortress_2.jpg);
+    background-size: contain;
+    padding-top: 530px;
+    position: relative;
+}
+
+.jumbotron_image {
+    width: 100%;
+    margin-top: 88px;
+    position: static;
+    border-bottom: 2px solid black;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+}
+
+.jumbotron_wavey {
+    display: block;
+    margin-top: 88px;
+
+}
+
+.jumbotron_title {
+    width: 70%;
+    margin: auto;
+    border-bottom: 3px solid black;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+/* ----------------------------------About Styles---------------------------------- */
+
+.about {
+    width: 70%;
+    margin: auto;
+    background-color: white;
+}
+
+.about h2 {
+    text-align: center;
+    font-family: 'tf2secondary';
+    display: block;
+    font-size: 2em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+.about p {
+    text-align: center;
+    display: block;
+    font-size: larger;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+/* ----------------------------------Mobile Compatibility---------------------------------- */
+
+@media (max-width:700px) {
+    .topbar {
+        height: 85px;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .topbar h1 {
+        width: 197px;
+        padding: 10px;
+        margin: 0;
+    }
+
+    .topbar ul {
+        padding: 0%;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        transition: .1s;
+    }
+
+    .topbar ul li {
+        width: 30%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .topbar ul li a img {
+        height: 16px;
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+
+    .about p{
+        font-size: large;
+    }
+
+    .mobile_invisible {
+        display: none;
+    }
+}
