@@ -123,6 +123,7 @@ html {
 
 .topbar {
     position: fixed;
+    z-index: 100;
     top: 0;
     left: 0;
     right: 0;
@@ -145,29 +146,29 @@ html {
 .jumbotron {
     background-image: url(img/Team_Fortress_2.jpg);
     background-size: contain;
-    padding-top: 530px;
+    margin-top: 88px;
     position: relative;
 }
 
 .jumbotron_image {
     width: 100%;
-    margin-top: 88px;
     position: static;
-    border-bottom: 2px solid black;
-    border-bottom-left-radius: 5%;
-    border-bottom-right-radius: 5%;
 }
 
 .jumbotron_wavey {
+    z-index: 1;
     display: block;
-    margin-top: 88px;
-
+    position: absolute;
+    bottom: 0;
 }
 
 .jumbotron_title {
+    bottom: 0;
+    z-index: 2;
+    position: absolute;
     width: 70%;
-    margin: auto;
-    border-bottom: 3px solid black;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 body {
