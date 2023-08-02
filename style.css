@@ -177,13 +177,18 @@ body {
 
 /* ----------------------------------About Styles---------------------------------- */
 
-.about {
-    width: 70%;
+#about {
+    width: 100%;
     margin: auto;
     background-color: white;
 }
 
-.about h2 {
+#about .info {
+    width: 70%;
+    margin: 0 15%;
+}
+
+#about .info h2 {
     text-align: center;
     font-family: 'tf2secondary';
     display: block;
@@ -195,10 +200,41 @@ body {
     font-weight: bold;
 }
 
-.about p {
+#about .info p {
     text-align: center;
     display: block;
-    font-size: larger;
+    font-size: x-large;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+#about section {
+    padding-top: 20px;
+}
+
+/* ----------------------------------About Programming---------------------------------- */
+
+#about .programming h1 {
+    margin-top: 50px;
+    display: block;
+    font-size: 5rem;
+    color: rgb(210,202,180);
+    font-family: 'tf2build';
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+#about .programming h2 {
+    color: rgb(210,202,180);
+    text-align: center;
+    font-family: 'tf2build';
+    display: block;
+    font-size: 2em;
     margin-top: 0.83em;
     margin-bottom: 0.83em;
     margin-left: 0;
@@ -206,9 +242,60 @@ body {
     font-weight: bold;
 }
 
+#about .programming h2 span {
+    color: rgb(201,79,57);
+}
+
+#about .programming img.Logos {
+    margin: 10px;
+    max-width: 256px;
+    height: 256px;
+}
+
+#about .programming {
+    padding-top: 0%;
+    background-color: rgb(42, 39, 37);
+}
+/* 
+#about .programming ul li img {
+    float: left;
+} */
+
+#about .programming ul {
+    display:flex ;
+    flex-direction: column;
+    align-items: center;
+}
+
+#about .programming ul li {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    border-radius: 5%;
+    background-color: rgb(51,47,45);
+    border: 2px solid rgb(170, 161,136);
+    font-family: 'tf2secondary';
+    font-size: x-large;
+    color: rgb(236,227,203);
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+#about .programming ul li span {
+    word-spacing: 0.5rem;
+    line-height: 1.25em;
+    margin: 25px;   
+}
+
 /* ----------------------------------Mobile Compatibility---------------------------------- */
 
 @media (max-width:700px) {
+
+/* ----------------------------------Mobile Compatibility---------------------------------- */
+    
     .topbar {
         height: 85px;
     }
@@ -244,11 +331,29 @@ body {
         padding-right: 3px;
     }
 
-    .about p{
-        font-size: large;
+/* ----------------------------------About---------------------------------- */
+
+    #about p{
+        font-size:medium;
     }
+
+    #about .programming ul li {
+        display:flex ;
+        flex-direction: column;
+        justify-items: center;
+        text-align: justify;
+    }
+
+    #about .programming img.Logos {
+        max-width: 128px;
+        max-height: 128px;
+    }
+
+/**/
 
     .mobile_invisible {
         display: none;
     }
+
+
 }
