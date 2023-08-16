@@ -64,6 +64,9 @@ html {
 .clear {
     clear: both;
 }
+.none {
+    display: none;
+}
 
 
 /* ----------------------------------Top Styles---------------------------------- */
@@ -290,11 +293,139 @@ body {
     margin: 25px;   
 }
 
+/* ----------------------------------Game Styles---------------------------------- */
+
+#game {
+    box-shadow: -10px 0 5px black;
+    position: relative;
+    overflow: hidden;
+}
+
+#game .main {
+    background-image: url("img/Game_RPS/versus.jpg");
+    background-repeat:no-repeat;
+    background-size: cover ;
+    background-position: center;
+}
+
+#game h2 {
+    color: rgb(210,202,180);
+    text-align: center;
+    font-family: 'tf2build';
+    display: block;
+    font-size: 2em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+#game .main ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+
+#game .main ul li:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.1s;
+}
+#game .main ul li:hover p {
+    opacity: 100%;
+    transition: 0.1s;
+}
+#game .main ul li {
+    height: 100vh;
+    width: 33.33vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+
+#game .main ul li p {
+    opacity: 0;
+    font-family: 'tf2secondary';
+    color: white;
+    height: 50px;
+    font-size: xx-large;
+}
+#game .main ul li img {
+    min-width: 100px;
+    max-width: 200px;
+}
+
+#game .main .center {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+#game .main .center .door {
+    position: absolute;
+    top: 0;
+    display: flex;
+    overflow: clip;
+    z-index: 0;
+}
+
+.left {
+    transform: translateX(-100%);
+}
+.right {
+    transform: translateX(100%);
+}
+
+#game .door img.RED {
+    height: 100vh;
+    transition: transform 1s;
+    overflow: hidden;
+}
+#game .door img.BLU {
+    height: 100vh;
+    transition: transform 1s;
+    overflow: hidden;
+}
+
+#game .front {
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    top: 0;
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    transition: opacity 0.5s;
+}
+
+#game .front .title {
+    line-height: calc(120% + 30px);
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+#game .front .title .deciding {
+    display: flex;
+    flex-direction: row;
+}
+
+#game .front .title button:hover {
+    cursor: pointer;
+}
+#game .front .title button {
+    background-color: #000000; /* Green */
+    border: none;
+    border-radius: 10px;
+}
+
 /* ----------------------------------Mobile Compatibility---------------------------------- */
 
 @media (max-width:700px) {
 
-/* ----------------------------------Mobile Compatibility---------------------------------- */
+/* ----------------------------------Top bar---------------------------------- */
     
     .topbar {
         height: 85px;
@@ -333,8 +464,8 @@ body {
 
 /* ----------------------------------About---------------------------------- */
 
-    #about p{
-        font-size:medium;
+#about p{
+    font-size:medium;
     }
 
     #about .programming ul li {
@@ -355,5 +486,30 @@ body {
         display: none;
     }
 
+    /* ----------------------------------About---------------------------------- */
 
+    #game .main ul li img{
+        width: 100px;
+    }
+
+    #game .main ul li {
+        height: 33.33vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column;
+    }    
+
+    #game .main ul{
+        flex-direction: column;
+    }
+
+    #game .front .title .deciding{
+        flex-direction: column;
+    }
+
+    #game .front .title .deciding img {
+        width: 100px;
+    }
 }
