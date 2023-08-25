@@ -96,6 +96,8 @@ html {
 }
 
 .topbar ul {
+    position: relative;
+    z-index: 2;
     padding-left: 50px;
 }
 
@@ -125,7 +127,9 @@ html {
 }
 
 .topbar {
-    position: fixed;
+    position: static; /*I've decided to make the top bar static, it actually creates a more dynamic feeling
+    to the website because there's no more annoying big object on the top of your screen*/ 
+    /* position: static; */
     z-index: 100;
     top: 0;
     left: 0;
@@ -147,9 +151,8 @@ html {
 /* ----------------------------------Jumbotron Styles---------------------------------- */
 
 .jumbotron {
-    background-image: url(img/Team_Fortress_2.jpg);
     background-size: contain;
-    margin-top: 88px;
+    /*margin-top: 88px;*/ /* Activate this style if you want to make the topbar fixed */
     position: relative;
 }
 
@@ -296,7 +299,7 @@ body {
 /* ----------------------------------Game Styles---------------------------------- */
 
 #game {
-    box-shadow: -10px 0 5px black;
+    box-shadow: -20px 0px 10px black, 20px 0px 10px black;
     position: relative;
     overflow: hidden;
 }
@@ -416,16 +419,78 @@ body {
     cursor: pointer;
 }
 #game .front .title button {
-    background-color: #000000; /* Green */
+    background-color: #000000;
     border: none;
     border-radius: 10px;
 }
 
+/* ----------------------------------Movie Styles---------------------------------- */
+
+#movies {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+#movies img {
+    min-width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    overflow: hidden;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+#movies h2 {
+    margin: 30px 0;
+    color: rgb(210,202,180);
+    text-align: center;
+    font-family: 'tf2build';
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#movies .navigations .description{
+    margin-left: 10vw;
+    margin-right: 10vw;
+    grid-area: description;
+    font-size: x-large;
+}
+
+#movies .navigations iframe {
+    grid-area: movie;
+    box-shadow: -20px 20px 10px black, 20px 20px 10px black, 20px -20px 10px black, -20px -20px 10px black;
+    border: 2px solid rgb(138, 131, 112);
+    margin-top: 10vw;
+    margin-bottom: 10vw;
+    margin-left: 10vw ;
+    margin-right: 10vw ;
+    width: 80vw;
+    height: 80vh;
+}
+#movies .navigations {
+    display: grid;
+    grid-template-areas: 
+    'description description'
+    'movie movie';
+    justify-items: center;
+    font-family: 'tf2secondary';
+    color: rgb(210,202,180);
+    text-align: center;
+    }
 /* ----------------------------------Mobile Compatibility---------------------------------- */
 
 @media (max-width:700px) {
-
-/* ----------------------------------Top bar---------------------------------- */
+    
+    /* ----------------------------------Top bar---------------------------------- */
+    
+    /**/
+    
+        .mobile_invisible {
+            display: none;
+        }
     
     .topbar {
         height: 85px;
@@ -433,6 +498,10 @@ body {
 
     .menu {
         display: block;
+    }
+
+    .topbar p {
+        display: none;
     }
 
     .topbar h1 {
@@ -462,9 +531,9 @@ body {
         padding-right: 3px;
     }
 
-/* ----------------------------------About---------------------------------- */
+    /* ----------------------------------About---------------------------------- */
 
-#about p{
+    #about p{
     font-size:medium;
     }
 
@@ -480,13 +549,8 @@ body {
         max-height: 128px;
     }
 
-/**/
 
-    .mobile_invisible {
-        display: none;
-    }
-
-    /* ----------------------------------About---------------------------------- */
+    /* ---------------------------------- Game ---------------------------------- */
 
     #game .main ul li img{
         width: 100px;
