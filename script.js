@@ -86,7 +86,7 @@ RPS.forEach( (element) => {element.addEventListener('click', (e) => {
       deciding = document.querySelector(".deciding");
       deciding.innerHTML = `<img src="img/Game_RPS/RPS_${youPicked}_Red.png" alt="${youPicked}">
       <h2>${result}</h2>
-      <img src="img/Game_RPS/RPS_${comPicked}_Blu.png" alt="${comPicked}">"`
+      <img src="img/Game_RPS/RPS_${comPicked}_Blu.png" alt="${comPicked}">`
 
         RedDoor.animate( [
             { transform: "translateX(0)", }
@@ -101,17 +101,3 @@ RPS.forEach( (element) => {element.addEventListener('click', (e) => {
           );
     })
 })
-
-  /* movie functions */
-
-  const mercs = ["Scout", "Soldier", "Pyro", "Engineer", "Heavy", "Pyro", "Medic", "Sniper", "Spy"]
-  const mercs_vids = [`<iframe class="Scout" src="https://www.youtube.com/embed/geNMz0J9TEQ?si=SA1l-pp236WlISkT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`,
-  `<iframe class="Soldier" src="https://www.youtube.com/embed/h42d0WHRSck?si=rGQ0lEMQA4y4XkV2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`,
-  `<iframe class="Pyro" src="https://www.youtube.com/embed/WUhOnX8qt3I?si=BSftUNrJ3IwPOZgD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`,
-  `<iframec class="Engineer" src="https://www.youtube.com/embed/SNgNBsCI4EA?si=lwfKhKHxdp7B974h" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`,
-  `<iframe class="Heavy" src="https://www.youtube.com/embed/jHgZh4GV9G0?si=Do-Xm70Aqk407LL2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`,
-  `<iframe class="Demoman" src="https://www.youtube.com/embed/han3AfjH210?si=a23HMb73GdmsH1Pu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`,
-  `<iframe class="Medic" src="https://www.youtube.com/embed/36lSzUMBJnc?si=NA0RBmQJedyH9dQh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`,
-  `<iframe class="Sniper" src="https://www.youtube.com/embed/9NZDwZbyDus?si=8CS4m3elV1M6XDxI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`,
-  `<iframe class="Spy" src="https://www.youtube.com/embed/OR4N5OhcY9s?si=Dtn9tC7FHzuCokR_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`,]
-  
